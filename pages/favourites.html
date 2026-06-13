@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist</title>
+   <link rel="stylesheet" href="../styles/favourites.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Your Favourites</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="elib1.html">Home</a></li>
+                    <li><a href="elib1.html">Shop Books</a></li>
+                    <li><a href="account.html">Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="wishlist">
+        <h2>Items in Your Favourites</h2>
+        <div class="wishlist-items" id="wishlistItems">
+            <!-- Wishlist items will be dynamically added here -->
+        </div>
+        <button class="checkout-btn">Proceed to Checkout</button>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            loadWishlistItems();
+        });
+
+        function loadWishlistItems() {
+            const wishlistItems = JSON.parse(localStorage.getItem('wishlistItems')) || [];
+            const wishlistItemsContainer = document.getElementById('wishlistItems');
+            wishlistItemsContainer.innerHTML = '';
+
+            wishlistItems.forEach(item => {
+                const wishlistItem = document.createElement('div');
+                wishlistItem.className = 'wishlist-item';
+                wishlistItem.innerHTML = `
+    <img src="../images/${item.image}" alt="${item.title}">
+    <div class="wishlist-item-details">
+        <h3>${item.title}</h3>
+        <p>${item.author}</p>
+        <button class="remove-btn" onclick="removeFromWishlist('${item.title}')">
+            Remove
+        </button>
+    </div>
+`;
+                wishlistItemsContainer.appendChild(wishlistItem);
+            });
+        }
+
+        function removeFromWishlist(title) {
+            let wishlistItems = JSON.parse(localStorage.getItem('wishlistItems')) || [];
+            wishlistItems = wishlistItems.filter(item => item.title !== title);
+            localStorage.setItem('wishlistItems', JSON.stringify(wishlistItems));
+            loadWishlistItems();
+        }
+    </script>
+</body>
+</html>

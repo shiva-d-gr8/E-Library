@@ -1,0 +1,166 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f8ff;
+    color: #333;
+    background-image: url('wishlist-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.header {
+    background-color: #4b0082;
+    color: #fff;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideDown 1s ease-in-out;
+}
+
+.logo {
+    float: left;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    float: right;
+}
+
+.nav-links li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Wishlist Section Styles */
+.wishlist {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    margin: 50px auto;
+    width: 80%;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.wishlist h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.wishlist-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wishlist-item {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.wishlist-item:hover {
+    transform: scale(1.05);
+}
+
+.wishlist-item img {
+    width: 100px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.wishlist-item-details {
+    text-align: left;
+}
+
+.wishlist-item h3 {
+    font-size: 20px;
+    margin: 0;
+}
+
+.wishlist-item p {
+    font-size: 16px;
+    color: #777;
+}
+
+.remove-btn {
+    padding: 10px 20px;
+    background-color: #ff4500;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.remove-btn:hover {
+    background-color: #ff6347;
+    transform: scale(1.05);
+}
+
+.checkout-btn {
+    padding: 15px 30px;
+    background-color: #4b0082;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+    margin-top: 20px;
+}
+
+.checkout-btn:hover {
+    background-color: #6a0dad;
+    transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}

@@ -1,0 +1,231 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Open+Sans:wght@400;700&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #fff0dc 0%, #ffd299 45%, #ff9d3e 100%);
+    color: #333;
+    background-attachment: fixed;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.header {
+    background-color: #ff7b00;
+    color: #fff;
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideDown 1s ease-in-out;
+}
+
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f5ae2a;
+}
+
+/* Request Form Styles */
+.request-page {
+    padding: 80px 20px 40px;
+}
+
+.request-form {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.form-card {
+    width: 100%;
+    max-width: 700px;
+    background-color: rgba(255, 255, 255, 0.92);
+    border-radius: 20px;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+    padding: 40px;
+    backdrop-filter: blur(8px);
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.form-header h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+    color: #ff7b00;
+}
+
+.form-header p {
+    font-size: 16px;
+    color: #5a5a5a;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.field-row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.field-group label {
+    font-size: 15px;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 600;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #d1d1d1;
+    border-radius: 12px;
+    font-size: 15px;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #ff912b;
+    box-shadow: 0 0 0 4px rgba(255, 123, 0, 0.18);
+}
+
+textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 16px 22px;
+    background-color: #ff7b00;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #ff9d3e;
+    transform: translateY(-2px);
+}
+
+/* Footer Styles */
+.footer {
+    background-color: rgba(255, 123, 0, 0.95);
+    color: #fff;
+    text-align: center;
+    padding: 24px 0;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+.footer-links a {
+    color: #f5ae2a;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .field-row {
+        grid-template-columns: 1fr;
+    }
+
+    .request-page {
+        padding: 40px 16px 20px;
+    }
+
+    .form-card {
+        padding: 30px 24px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}

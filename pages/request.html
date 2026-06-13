@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request a Book</title>
+    <link rel="stylesheet" href="../styles/request.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Request a Book</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="elib1.html">Home</a></li>
+                    <li><a href="subscribe.html">Subscribe</a></li>
+                    <li><a href="registration.html">Registration</a></li>
+                    <li><a href="favourites.html">Wishlist</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="request-page">
+        <div class="request-form">
+            <div class="form-card">
+                <div class="form-header">
+                    <h2>Request a New Book</h2>
+                    <p>Suggest a title and author to add to our library collection.</p>
+                </div>
+                <form id="bookRequestForm">
+                    <div class="field-group">
+                        <label for="title">Book Title</label>
+                        <input type="text" id="title" name="title" placeholder="Enter book title" required>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="author">Author</label>
+                        <input type="text" id="author" name="author" placeholder="Enter author name" required>
+                    </div>
+
+                    <div class="field-row">
+                        <div class="field-group">
+                            <label for="genre">Genre</label>
+                            <input type="text" id="genre" name="genre" placeholder="e.g. Fiction, Mystery" required>
+                        </div>
+                        <div class="field-group">
+                            <label for="year">Publication Year</label>
+                            <input type="text" id="year" name="year" placeholder="Optional">
+                        </div>
+                    </div>
+
+                    <div class="field-group">
+                        <label for="description">Why should we add this book?</label>
+                        <textarea id="description" name="description" rows="5" placeholder="Tell us why this book belongs in our collection" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Online Library. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms of Service</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </footer>
+
+<script src="../scripts/request.js"></script>
+</body>
+</html>

@@ -1,0 +1,232 @@
+/* styles.css */
+
+/* General Reset */
+body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+
+    /* Adding Background Image */
+    background: url('https://i0.wp.com/stanzaliving.wpcomstaging.com/wp-content/uploads/2024/05/9b628-book-stores-in-delhi.jpg?fit=1000%2C667&ssl=1') no-repeat center center fixed;
+    background-size: cover;
+
+    /* Adding Gradient Overlay with Animation */
+    background-blend-mode: overlay;
+    background-color: rgba(255, 255, 255, 0.6);
+    animation: gradient-animation 6s infinite;
+}
+
+@keyframes gradient-animation {
+    0% { background-color: rgba(255, 235, 235, 0.7); }
+    50% { background-color: rgba(235, 255, 255, 0.7); }
+    100% { background-color: rgba(255, 235, 235, 0.7); }
+}
+
+.header {
+    background-color: rgba(51, 51, 51, 0.9);
+    color: white;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    animation: fade-in 1.5s ease-in;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff9a9e;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    color: white;
+
+    /* Adding translucent background for readability */
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: 20px;
+    border-radius: 10px;
+
+    animation: slide-in 1.5s ease-out;
+}
+
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero-btn {
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    animation: bounce 2s infinite;
+}
+
+.categories {
+    padding: 20px;
+    text-align: center;
+}
+
+.category-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.category-item {
+    padding: 10px 20px;
+    background-color: #ffffff80;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    animation: fade-in 1s ease;
+}
+
+.category-item:hover {
+    background-color: #0073e6;
+    color: white;
+    transform: scale(1.1);
+}
+
+.featured-books {
+    padding: 20px;
+    text-align: center;
+}
+
+.book-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 20px;
+}
+
+.book-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    animation: slide-in 1.2s ease;
+}
+
+.book-card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    display: block;
+}
+
+.book-card h3 {
+    font-size: 18px;
+    padding: 10px;
+    margin: 0;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+}
+
+/* Animations */
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slide-in {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+  input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px; /* Adjust width as needed */
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+/* Add CSS for styling the search bar */
+
+.search-container input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 300px; 
+}
+
+.search-container button {
+    padding: 10px 20px;
+    background-color: #4a87f8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.center-container {
+    text-align: center; /* Center the contents of this container */
+}
